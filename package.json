@@ -1,0 +1,21 @@
+{
+  "name": "azure-function-http-typescript-jest-quickstart",
+  "scripts": {
+    "build": "tsc",
+    "build:production": "npm run prestart && npm prune --production",
+    "watch": "tsc --w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm-run-all --parallel start:host watch"
+  },
+  "description": "Minimal setup to get you started with unit-testing HTTP-triggered Azure Function",
+  "devDependencies": {
+    "@azure/functions": "^1.0.1-beta1",
+    "@types/node-fetch": "^2.5.7",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
